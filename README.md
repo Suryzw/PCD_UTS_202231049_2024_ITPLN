@@ -39,18 +39,21 @@
     import matplotlib.pyplot as plt
     import numpy a np
     ```
-4. Import gambar yang ingin digunakan, dalam hal ini saya gunakan file dengan nama **cpy10.jpg**. Menyimpannya ke dalam variabel `img`. Setelahnya, kita mengkonversi gambar dari BGR ke RGB. Gunakan perintah berikut:
+4. Import gambar yang ingin digunakan, dalam hal ini saya gunakan file dengan nama **cpy10.jpg**.
+![infoLokasi](infoLokasi.jpg)
+![cpy10](cpy10.jpg)
+Menyimpannya ke dalam variabel `img`. Setelahnya, kita mengkonversi gambar dari BGR ke RGB. Gunakan perintah berikut:
     ```
     img = cv2.imread('cpy10.jpg') #untuk mengimport gambar
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) #konversi BGR ke RGB
     ```
 
-5. Gunakan perintah berikut untuk mendeteksi warna merah, hijau, dan biru pada citra.
+6. Gunakan perintah berikut untuk mendeteksi warna merah, hijau, dan biru pada citra.
     ```
     red, green, blue = cv2.split(img)
     ```
 
-6. Untuk menampilkan gambar yang sudah di filter, dapat menggunakan perintah berikut : 
+7. Untuk menampilkan gambar yang sudah di filter, dapat menggunakan perintah berikut : 
     ```
     fig, axs = plt.subplots(4,2,figsize=(15,15))
     axs[0,0].imshow(img) # Menampilkan gambar original
